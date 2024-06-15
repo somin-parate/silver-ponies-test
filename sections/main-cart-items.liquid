@@ -437,6 +437,12 @@
         </div>
       </div>
 
+      <!-- ADDED CLEAR CART BUTTON BY SOMIN -->
+      <div class="cart_clear_items">
+        <button class="button clear-cart-button" id="clear-cart-button">Clear Cart Items</button>
+      </div>
+      <!-- END CLEAR CART BUTTON BY SOMIN -->
+
       <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
       <p
         class="visually-hidden"
@@ -450,6 +456,32 @@
     </form>
   </div>
 </cart-items>
+<!-- ADDED BY SOMIN - CLEAR CART SCRIPT ON CLICK -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('clear-cart-button').addEventListener('click', function (e) {
+        e.preventDefault();
+        clearCart();
+    });
+
+    function clearCart() {
+        fetch('/cart/clear.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+              location.reload();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+});
+</script>
+<!-- END BY SOMIN - CLEAR CART SCRIPT ON CLICK -->
 
 {% schema %}
 {

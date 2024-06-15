@@ -18,3 +18,8 @@
 .product-grid-container .collection .card-wrapper .card__inner{
     transform: none;
 }
+
+/* THIS CSS FOR CLEAR CART ITEAMS BUTTON */
+.cart_clear_items{
+    padding-top: 30px;
+}
