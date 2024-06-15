@@ -640,6 +640,8 @@
                 </product-recommendations>
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
+              {%- when 'Product_extra_info' -%}
+                {% render 'product-extra-info' , block: block%}
             {%- endcase -%}
           {%- endfor -%}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -2093,6 +2095,17 @@
           "default": "Heading",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+     {
+      "type": "Product_extra_info",
+      "name": "Product Extra Info",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "extra_info_text",
+          "label": "Product Extra Info Text"
         }
       ]
     }
