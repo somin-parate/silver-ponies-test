@@ -2098,7 +2098,7 @@
         }
       ]
     },
-     {
+       {
       "type": "Product_extra_info",
       "name": "Product Extra Info",
       "settings": [
@@ -2106,6 +2106,33 @@
           "type": "richtext",
           "id": "extra_info_text",
           "label": "Product Extra Info Text"
+        },
+        {
+          "type": "range",
+          "id": "text_turncate_desk",
+          "min": 100,
+          "max": 1000,
+          "step": 10,
+          "unit": "px",
+          "label": "Display Content Length for Desktop",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "text_turncate_mobile",
+          "min": 100,
+          "max": 1000,
+          "step": 10,
+          "unit": "px",
+          "label": "Display Content Length for Mobile",
+          "default": 100,
+          "info": "Display content length for mobile starting from a screen size of 768 Pixels."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_hide",
+          "label": "Show / Hide Turncate Words.",
+          "default": true
         }
       ]
     }
